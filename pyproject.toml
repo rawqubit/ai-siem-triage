@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-siem-triage"
+version = "1.0.0"
+description = "AI-powered SIEM alert triage assistant for SOC analysts: classifies, prioritizes, and recommends response actions."
+license = {text = "MIT"}
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.scripts]
+ai-siem-triage = "ai_siem_triage.main:cli"
+
+[tool.setuptools.packages.find]
+include = ["ai_siem_triage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
